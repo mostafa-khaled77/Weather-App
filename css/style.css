@@ -1,0 +1,187 @@
+:root {
+  --main-color: #1e202b;
+  --primary-color: #323544;
+  --third-color: #009ad8;
+  --fourth-color: #2d303d;
+  --fifth-color: #262936;
+  --sixth-color: #222530;
+  --main-font: "Roboto", sans-serif;
+}
+body {
+  font-family: var(--main-font);
+  color: white;
+}
+input {
+  caret-color: white;
+  outline: none;
+}
+input::placeholder {
+  font-size: 14px;
+}
+.background-color-main {
+  background-color: var(--main-color);
+}
+.background-color-primary {
+  background-color: var(--primary-color);
+}
+.background-color-fourth {
+  background-color: var(--fourth-color);
+}
+.background-color-fifth {
+  background-color: var(--fifth-color);
+}
+.background-color-sixth {
+  background-color: var(--sixth-color);
+}
+/* Start NavBar */
+nav .logo-title h4 {
+  font-size: 17px;
+}
+nav .logo-title p {
+  font-size: 11px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  font-size: 14px;
+}
+.nav-link {
+  border: 2px solid transparent;
+  border-radius: 35px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+.nav-link:hover,
+.nav-link:focus {
+  border-color: var(--third-color);
+  color: var(--third-color);
+}
+.navbar-nav .nav-link.active {
+  border: 2px solid var(--third-color);
+  border-radius: 35px;
+  color: var(--third-color);
+}
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    background-color: var(--primary-color);
+    text-align: center;
+    border-radius: 10px;
+  }
+  .nav-link,
+  .navbar-nav .nav-link.active {
+    border: none;
+  }
+  .nav-item:not(:last-child):after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #777;
+  }
+}
+/* End NavBar */
+
+/* Start Header section */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0)),
+    url(../images/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100vw;
+  min-height: 40vh;
+}
+header button {
+  right: 20px;
+  background-color: var(--third-color);
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* End Header section */
+
+/* Weather cards */
+section .container {
+  margin-top: -150px;
+}
+.weather-card h1 {
+  font-size: 80px;
+}
+.weather-card img {
+  width: 60px;
+  height: 60px;
+}
+.weather-card {
+  transition: all 0.3s ease-in-out;
+}
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 3px 3px 10px var(--third-color), -3px -3px 10px var(--third-color);
+}
+
+/* Start Footer */
+footer {
+  max-width: 100vw;
+}
+footer button {
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--third-color);
+}
+.icons a {
+  width: 35px;
+  height: 35px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  color: var(--third-color);
+  transition: all 0.3s ease-in-out;
+}
+.icons a:hover {
+  background-color: var(--third-color);
+  color: white;
+}
+footer p {
+  font-size: 14px;
+}
+/* Css Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--third-color);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
