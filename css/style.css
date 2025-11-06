@@ -103,6 +103,11 @@ header button {
 section .container {
   margin-top: -150px;
 }
+@media screen and (max-width : 768px){
+  section .container {
+  margin-top: -90px;
+}
+}
 .weather-card h1 {
   font-size: 80px;
 }
@@ -184,4 +189,5 @@ footer p {
     transform: scale(1.0);
     -webkit-transform: scale(1.0);
   }
+
 }
