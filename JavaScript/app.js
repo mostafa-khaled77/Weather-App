@@ -50,7 +50,7 @@ function displayRowData(){
     var date = new Date();
     var dayIndex = date.getDay();
     var monthIndex = date.getMonth();
-    rowData.innerHTML = `<div class="col-lg-4 col-md-6 h-100">
+    rowData.innerHTML = `<div class="col-lg-4 h-100">
                 <div
                 class="weather-card rounded-3 overflow-hidden background-color-primary h-100"
                 >
@@ -74,7 +74,7 @@ function displayRowData(){
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4 text-center">
                 <div
                 class="weather-card rounded-3 overflow-hidden background-color-fifth h-100"
                 >
@@ -90,7 +90,7 @@ function displayRowData(){
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 text-center">
+            <div class="col-lg-4 text-center">
                 <div
                 class="weather-card rounded-3 overflow-hidden background-color-primary h-100"
                 >
@@ -121,4 +121,5 @@ var city = searchInput.value.trim().toLowerCase();
 if(city.length > 0){
     getWeather(city)
 }
+
 })
