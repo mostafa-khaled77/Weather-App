@@ -62,4 +62,3 @@ Users can also search for any city to view a 3-day weather forecast with a clean
 ## 📸 Demo Preview
 
 Live Demo Here : https://mostafa-khaled77.github.io/Weather-App/
-/ه
